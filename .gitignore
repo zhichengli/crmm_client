@@ -35,21 +35,3 @@ captures/
 
 
 
-# External native build folder generated in Android Studio 2.2 and later
-.externalNativeBuild
-
-*.log
-.idea/*
-local.properties
-build/*
-gradle/
-local.properties
-*.iml
-
-.idea/codeStyles/Project.xml
-gradle/*
-
-
-CMakeLists.txt
-
-app/release/*
