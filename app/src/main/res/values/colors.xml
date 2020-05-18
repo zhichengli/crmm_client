@@ -3,4 +3,19 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="colorPink">#FFC0CB</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="main_text_bg_color">#00baad</color>
+    <color name="text_color_opposite">#FFFFFF</color>
+    <color name="main_btn_bg_color">#00baad</color>
+
+
+    <color name="text_big_color">#00aaaa</color>
+
+    <color name="bg_main"></color>
+    
+
+    <color name="text_color_sub">#8b8b8b</color>
+    <color name="text_color_main">#000000</color>
 </resources>
