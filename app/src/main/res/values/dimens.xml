@@ -12,5 +12,7 @@
     <dimen name="title_height">48dp</dimen>
     <!--toolbar的高度-->
     <dimen name="toolbar_height">44dp</dimen>
+    <dimen name="max_height">100dp</dimen>
 
+    <dimen name="login_image_width">48dp</dimen>
 </resources>

@@ -3,13 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/max_height"
         android:gravity="center_horizontal"
-        android:text="欢迎登录"
+        android:text="注册账号"
         android:textColor="@color/text_big_color"
         android:textSize="@dimen/text_size_mark" />
 
@@ -55,6 +54,57 @@
         android:layout_marginRight="@dimen/margin_top"
         android:background="@drawable/line_for_editview" />
 
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_top"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginRight="@dimen/margin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/login_shield" />
+
+        <EditText
+            android:id="@+id/et_auth_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorTransparent"
+            android:hint="请输入短信验证码"
+            android:inputType="textPassword"
+            android:padding="@dimen/padding_main"
+            android:textColor="@color/text_color_main"
+            android:textSize="@dimen/text_size_main" />
+
+        <TextView
+            android:id="@+id/iv_auth_code"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:padding="@dimen/padding_main"
+            android:gravity="center"
+            android:textColor="@color/text_color_opposite"
+            android:text="获取验证码"
+            android:textSize="@dimen/text_size_small"
+            android:background="@drawable/btn_bg"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_auth_code_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/margin_top"
+        android:layout_marginRight="@dimen/margin_top"
+        android:background="@drawable/line_for_editview" />
+
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -97,37 +147,66 @@
         android:layout_marginRight="@dimen/margin_top"
         android:background="@drawable/line_for_editview" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_top"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginRight="@dimen/margin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/login_lock" />
+
+        <EditText
+            android:id="@+id/et_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorTransparent"
+            android:hint="请再次输入密码"
+            android:inputType="textPassword"
+            android:padding="@dimen/padding_main"
+            android:textColor="@color/text_color_main"
+            android:textSize="@dimen/text_size_main" />
+
+        <ImageView
+            android:id="@+id/iv_show_confirm_password"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:padding="@dimen/padding_main"
+            android:src="@mipmap/login_pwd_hide" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_confirm_password_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/margin_top"
+        android:layout_marginRight="@dimen/margin_top"
+        android:background="@drawable/line_for_editview" />
+
+
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/title_height"
-        android:background="@color/main_btn_bg_color"
+        android:background="@drawable/btn_bg"
         android:text="登录"
         android:textColor="@color/text_color_opposite"
         android:textSize="@dimen/text_size_big" />
-    <LinearLayout
+    <Button
+        android:id="@+id/btn_back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/title_height"
-        android:layout_marginRight="@dimen/title_height">
-        <TextView
-            android:id="@+id/tv_go_register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/text_size_main"
-            android:text="注册用户"
-            android:textColor="@color/main_text_bg_color"/>
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-        <TextView
-            android:id="@+id/tv_go_find"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/text_size_main"
-            android:text="忘记密码"
-            android:textColor="@color/main_text_bg_color"/>
-    </LinearLayout>
+        android:layout_marginRight="@dimen/title_height"
+        android:background="@drawable/btn_bg_opposite"
+        android:text="返回登录页"
+        android:textColor="@color/text_big_color"
+        android:textSize="@dimen/text_size_big" />
 </LinearLayout>
