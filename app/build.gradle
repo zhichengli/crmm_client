@@ -44,4 +44,6 @@ dependencies {
     //compile group: 'com.squareup.retrofit2', name: 'converter-jackson', version: '2.9.0
     implementation "com.squareup.retrofit2:converter-jackson:$retrofit_version"
 
+
+
 }

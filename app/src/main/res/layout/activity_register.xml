@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_top"
-        android:layout_marginTop="@dimen/max_height"
+        android:layout_marginTop="@dimen/top_height_50"
         android:layout_marginRight="@dimen/margin_top"
         android:gravity="center_vertical"
         android:orientation="horizontal">
@@ -34,7 +35,9 @@
             android:background="@color/colorTransparent"
             android:hint="请输入手机号"
             android:inputType="phone"
+            android:maxLength="11"
             android:padding="@dimen/padding_main"
+            android:singleLine="true"
             android:textColor="@color/text_color_main"
             android:textSize="@dimen/text_size_main" />
 
@@ -53,7 +56,6 @@
         android:layout_marginLeft="@dimen/margin_top"
         android:layout_marginRight="@dimen/margin_top"
         android:background="@drawable/line_for_editview" />
-
 
 
     <LinearLayout
@@ -77,21 +79,23 @@
             android:layout_weight="1"
             android:background="@color/colorTransparent"
             android:hint="请输入短信验证码"
-            android:inputType="textPassword"
+            android:inputType="number"
+            android:maxLength="6"
             android:padding="@dimen/padding_main"
+            android:singleLine="true"
             android:textColor="@color/text_color_main"
             android:textSize="@dimen/text_size_main" />
 
-        <TextView
+        <Button
             android:id="@+id/iv_auth_code"
             android:layout_width="100dp"
             android:layout_height="48dp"
-            android:padding="@dimen/padding_main"
+            android:background="@drawable/btn_bg"
             android:gravity="center"
-            android:textColor="@color/text_color_opposite"
+            android:padding="@dimen/padding_main"
             android:text="获取验证码"
-            android:textSize="@dimen/text_size_small"
-            android:background="@drawable/btn_bg"/>
+            android:textColor="@color/text_color_opposite"
+            android:textSize="@dimen/text_size_small" />
     </LinearLayout>
 
     <View
@@ -101,8 +105,6 @@
         android:layout_marginLeft="@dimen/margin_top"
         android:layout_marginRight="@dimen/margin_top"
         android:background="@drawable/line_for_editview" />
-
-
 
 
     <LinearLayout
@@ -127,7 +129,9 @@
             android:background="@color/colorTransparent"
             android:hint="请输入密码"
             android:inputType="textPassword"
+            android:maxLength="30"
             android:padding="@dimen/padding_main"
+            android:singleLine="true"
             android:textColor="@color/text_color_main"
             android:textSize="@dimen/text_size_main" />
 
@@ -169,7 +173,9 @@
             android:background="@color/colorTransparent"
             android:hint="请再次输入密码"
             android:inputType="textPassword"
+            android:maxLength="30"
             android:padding="@dimen/padding_main"
+            android:singleLine="true"
             android:textColor="@color/text_color_main"
             android:textSize="@dimen/text_size_main" />
 
@@ -199,6 +205,7 @@
         android:text="登录"
         android:textColor="@color/text_color_opposite"
         android:textSize="@dimen/text_size_big" />
+
     <Button
         android:id="@+id/btn_back"
         android:layout_width="match_parent"

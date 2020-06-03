@@ -7,7 +7,10 @@ package com.zcl.crmm_client.mvp_base
 interface IView {
     fun showLoading()
     fun hideLoading()
-    fun <T> showMsg(msg:T)
+
+    fun onSuccess(msg:String)
     //统一处理错误消息
-    fun errorMsg(e : Exception)
+
+    fun onFail(msg: String)
+    fun onError(e : Exception)
 }

@@ -1,5 +1,8 @@
 package com.zcl.crmm_client.mvp_base
 
+import com.zcl.crmm_client.base.BaseActivity
+import com.zcl.crmm_client.base.Callback
+
 /**
  *Created by zcl
  *
@@ -19,12 +22,8 @@ abstract class BasePresenter<V : IView> : IPresenter<V> {
         mRootView = null
     }
 
-    override fun attachView(view: V) {
+     override fun attachView(view: V) {
         mRootView = view
     }
-
-    override fun getView(): V {
-        return mRootView!!
-    }
-
+    fun <T> mCallback(callback:(T)->Unit) = Callback(mRootView as BaseActivity,callback = callback)
 }
