@@ -4,6 +4,7 @@ package com.zcl.crmm_client.base
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.zcl.crmm_client.R
@@ -24,7 +25,7 @@ abstract class BaseActivity : AppCompatActivity(), IView {
     lateinit var loadingDialog: LoadingDialog
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         //沉浸式代码配置
         //当FitsSystemWindows设置 true 时，会在屏幕最上方预留出状态栏高度的 padding
         StatusBarUtil.setRootViewFitsSystemWindows(this, true);

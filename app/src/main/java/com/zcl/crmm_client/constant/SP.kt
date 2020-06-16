@@ -13,7 +13,7 @@ object SP {
         edit().putString("token",value).commit()
     }
 
-    var user:User =  BaseApplication.sharedPreference().getString("user","").let { ObjectMapper().readValue(it,User::class.java)}
+    var user:User? =  BaseApplication.sharedPreference().getString("user",null)?.let { ObjectMapper().readValue(it,User::class.java)}
     set(value) {
-        edit().putString("user",value.let { ObjectMapper().writeValueAsString(it)}).commit()}
+        edit().putString("user",value?.let { ObjectMapper().writeValueAsString(it)}).commit()}
 }

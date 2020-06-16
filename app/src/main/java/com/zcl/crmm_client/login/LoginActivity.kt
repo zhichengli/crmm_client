@@ -11,6 +11,7 @@ import com.zcl.crmm_client.base.API
 import com.zcl.crmm_client.base.BaseActivity
 import com.zcl.crmm_client.base.RestAPI
 import com.zcl.crmm_client.login.bean.User
+import com.zcl.crmm_client.login.mvp.LoginContract
 import com.zcl.crmm_client.login.mvp.LoginPresenter
 import com.zcl.crmm_client.utils.StatusBarUtil
 import com.zcl.crmm_client.utils.ToastUtils
@@ -23,7 +24,7 @@ import retrofit2.Response
  *Created by zcl
  *
  */
-class LoginActivity : BaseActivity() {
+class LoginActivity : BaseActivity(), LoginContract.ILoginView {
 lateinit var mPresenter:LoginPresenter<BaseActivity>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -78,6 +79,12 @@ lateinit var mPresenter:LoginPresenter<BaseActivity>
 
         }
     }
+
+    override fun loginSuccess(){
+        startActivity(Intent(this,MainActivity::class.java))
+        finish()
+    }
+
 
     override fun onDestroy() {
         super.onDestroy()
